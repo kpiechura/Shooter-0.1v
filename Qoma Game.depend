@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1404675775 source:c:\users\kamil\documents\programs c++\qoma\qoma game\game.cpp
+	"header1.h"
+	<cstdlib>
+	<ctime>
+
+1385829560 c:\users\kamil\documents\programs c++\qoma\qoma game\header1.h
+	<allegro.h>
+
+1404675630 source:c:\users\kamil\documents\programs c++\qoma\qoma game\main.cpp
+	<allegro.h>
+	<winalleg.h>
+	"header1.h"
+
+1379179269 source:c:\users\kamil\documents\programs c++\qoma\qoma game\errors_mess.cpp
+	"header1.h"
+
+1381770362 source:c:\users\kamil\documents\programs c++\qoma\qoma game\menu.cpp
+	"header1.h"
+
+1385748042 c:\users\kamil\documents\programs c++\qoma\qoma game\main.cpp
+	<allegro.h>
+	<winalleg.h>
+	"header1.h"
+
+1404675776 source:c:\users\user\documents\programs c++\qoma\qoma game\game.cpp
+	"header1.h"
+	<cstdlib>
+	<ctime>
+
+1385829562 c:\users\user\documents\programs c++\qoma\qoma game\header1.h
+	<allegro.h>
+
+1404675850 source:c:\users\user\documents\programs c++\qoma\qoma game\main.cpp
+	<allegro.h>
+	<winalleg.h>
+	"header1.h"
+
+1381770364 source:c:\users\user\documents\programs c++\qoma\qoma game\menu.cpp
+	"header1.h"
+
