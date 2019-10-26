@@ -25,14 +25,14 @@ int main(int argc,char*argvc[])
     set_palette(default_palette);
     clear_bitmap(screen);
 
-    SAMPLE*click=load_sample("menu_click.wav");
+    SAMPLE*click=load_sample("assets/audio/menu_click.wav");
     if(!click)
     {set_gfx_mode( GFX_TEXT, 0, 0, 0, 0 );
     allegro_message( "ERROR: Program can't load sound." );
     allegro_exit();
     return 0;}
 
-    SAMPLE*menu_music=load_wav("menu_music.wav");
+    SAMPLE*menu_music=load_wav("assets/audio/menu_music.wav");
     if(!menu_music)
     {set_gfx_mode( GFX_TEXT, 0, 0, 0, 0 );
     allegro_message( "ERROR: Program can't load sound." );
@@ -47,37 +47,37 @@ int main(int argc,char*argvc[])
         return 0;}
     //BITMAPS for menu
     BITMAP*str_s[4];
-    BITMAP*m_back=load_bmp("m_background.bmp",default_palette);
-        str_s[0]=load_bmp("m_str1.bmp",default_palette);
-        str_s[1]=load_bmp("m_str2.bmp",default_palette);
-        str_s[2]=load_bmp("m_str3.bmp",default_palette);
-        str_s[3]=load_bmp("m_str4.bmp",default_palette);
+    BITMAP*m_back=load_bmp("assets/img/m_background.bmp",default_palette);
+        str_s[0]=load_bmp("assets/img/m_str1.bmp",default_palette);
+        str_s[1]=load_bmp("assets/img/m_str2.bmp",default_palette);
+        str_s[2]=load_bmp("assets/img/m_str3.bmp",default_palette);
+        str_s[3]=load_bmp("assets/img/m_str4.bmp",default_palette);
     BMPLoadArray(str_s,4);
 
-    BITMAP*title=load_bmp("m_title.bmp",default_palette); BMPLoad(title);
-    BITMAP*str_ver=load_bmp("m_ver.bmp",default_palette); BMPLoad(str_ver);
+    BITMAP*title=load_bmp("assets/img/m_title.bmp",default_palette); BMPLoad(title);
+    BITMAP*str_ver=load_bmp("assets/img/m_ver.bmp",default_palette); BMPLoad(str_ver);
     //BITMAPS for options_front
     BITMAP*texts[2];
-        texts[0]=load_bitmap("o_controls.bmp",default_palette);
-        texts[1]=load_bitmap("o_sound.bmp",default_palette);
+        texts[0]=load_bitmap("assets/img/o_controls.bmp",default_palette);
+        texts[1]=load_bitmap("assets/img/o_sound.bmp",default_palette);
     BMPLoadArray(texts,2);
     //BITMAPS for credits
     BITMAP*_credits[5];
-        _credits[0]=load_bmp("c_str1.bmp",default_palette);
-        _credits[1]=load_bmp("c_str2.bmp",default_palette);
-        _credits[2]=load_bmp("c_str3.bmp",default_palette);
-        _credits[3]=load_bmp("c_author.bmp",default_palette);
-        _credits[4]=load_bmp("c_reserved.bmp",default_palette);
+        _credits[0]=load_bmp("assets/img/c_str1.bmp",default_palette);
+        _credits[1]=load_bmp("assets/img/c_str2.bmp",default_palette);
+        _credits[2]=load_bmp("assets/img/c_str3.bmp",default_palette);
+        _credits[3]=load_bmp("assets/img/c_author.bmp",default_palette);
+        _credits[4]=load_bmp("assets/img/c_reserved.bmp",default_palette);
     BMPLoadArray(_credits,5);
     //BITMAPS for options -> controls
-    BITMAP*move_P1=load_bitmap("control_P1_move.bmp",default_palette); BMPLoad(move_P1);
-    BITMAP*P1_str=load_bitmap("P1_str.bmp",default_palette); BMPLoad(P1_str);
-    BITMAP*P2_str=load_bitmap("P2_str.bmp",default_palette); BMPLoad(P2_str);
-    BITMAP*shoot_str=load_bitmap("control_shoot.bmp",default_palette); BMPLoad(shoot_str);
-    BITMAP*move_P2=load_bitmap("control_P2_move.bmp",default_palette); BMPLoad(move_P2);
-    BITMAP*move_str=load_bitmap("control_move.bmp",default_palette); BMPLoad(move_str);
-    BITMAP*space_bmp=load_bitmap("control_P1_shoot.bmp",default_palette); BMPLoad(space_bmp);
-    BITMAP*shift_bmp=load_bitmap("control_P2_shoot.bmp",default_palette); BMPLoad(shift_bmp);
+    BITMAP*move_P1=load_bitmap("assets/img/control_P1_move.bmp",default_palette); BMPLoad(move_P1);
+    BITMAP*P1_str=load_bitmap("assets/img/P1_str.bmp",default_palette); BMPLoad(P1_str);
+    BITMAP*P2_str=load_bitmap("assets/img/P2_str.bmp",default_palette); BMPLoad(P2_str);
+    BITMAP*shoot_str=load_bitmap("assets/img/control_shoot.bmp",default_palette); BMPLoad(shoot_str);
+    BITMAP*move_P2=load_bitmap("assets/img/control_P2_move.bmp",default_palette); BMPLoad(move_P2);
+    BITMAP*move_str=load_bitmap("assets/img/control_move.bmp",default_palette); BMPLoad(move_str);
+    BITMAP*space_bmp=load_bitmap("assets/img/control_P1_shoot.bmp",default_palette); BMPLoad(space_bmp);
+    BITMAP*shift_bmp=load_bitmap("assets/img/control_P2_shoot.bmp",default_palette); BMPLoad(shift_bmp);
     //BITMAPS for 'exit'
     BITMAP*exit_que=NULL;
     BITMAP*exit_str[2];
@@ -187,8 +187,8 @@ int main(int argc,char*argvc[])
             while(!key[KEY_ESC])
             {
                 masked_blit(m_back,buffer,0,0,0,0,m_back->w,m_back->h)
-                exit_que=load_bmp("m_exit_que.bmp",default_palette);
-                exit_str[0]=load_bmp("m_exit_yes.bmp",default_palette);exit_str[1]=load_bmp("m_exit_no.bmp",default_palette);
+                exit_que=load_bmp("assets/img/m_exit_que.bmp",default_palette);
+                exit_str[0]=load_bmp("assets/img/m_exit_yes.bmp",default_palette);exit_str[1]=load_bmp("assets/img/m_exit_no.bmp",default_palette);
                 blit(exit_que,buffer,0,0,230,250,exit_que->w,exit_que->h);
                 blit(exit_str[0],buffer,0,0,100,350,exit_str[0]->w,exit_str[0]->h);
                 blit(exit_str[1],buffer,0,0,520,350,exit_str[1]->w,exit_str[1]->h);
