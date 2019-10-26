@@ -4,15 +4,15 @@
 
 void LoadGameBack()
 {
-    SAMPLE*bullet_sound=load_wav("bullet_sound.wav");
-    SAMPLE*game_music=load_wav("game_music.wav");
+    SAMPLE*bullet_sound=load_wav("assets/audio/bullet_sound.wav");
+    SAMPLE*game_music=load_wav("assets/audio/game_music.wav");
     play_sample(game_music,150,127,1000,1);
-    BITMAP*game_back=load_bmp("game_back.bmp",default_palette);
+    BITMAP*game_back=load_bmp("assets/img/game_back.bmp",default_palette);
     BITMAP*pocisk=create_bitmap(1,20);
     clear_to_color(pocisk,makecol(255,0,255));
     BITMAP*buffer_game=create_bitmap(1024,768); //zmienna musi byc globalna
-    BITMAP*P1=load_bmp("model_P1.bmp",default_palette);
-    BITMAP*P2=load_bmp("model_P2.bmp",default_palette);
+    BITMAP*P1=load_bmp("assets/img/model_P1.bmp",default_palette);
+    BITMAP*P2=load_bmp("assets/img/model_P2.bmp",default_palette);
     int x1=400,y1=600;
     int x2=400,y2=60;
     float pos_back=6;
